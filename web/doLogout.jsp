@@ -4,4 +4,4 @@
 <%-- Удалить из сессии JavaBean с данными пользователя --%>
 <c:remove var="authUser" scope="session" />
 <%-- Переадресовать на начальную страницу --%>
-<c:redirect url="/index.jsp" />
+<c:redirect url="/" />

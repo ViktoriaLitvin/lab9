@@ -9,8 +9,7 @@
 <%-- Удалить из сессии старые данные --%>
 <c:remove var="userData" />
 <%-- Сконструировать новый JavaBean в области видимости сессии --%>
-<jsp:useBean id="userData" class="bsu.rfe.java.teacher.entity.User"
-             scope="session" />
+<jsp:useBean id="userData" class="bsu.rfe.java.group6.lab9.Litvinenko.metodichka.entity.User" scope="session" />
 <%-- Скопировать в bean все параметры из HTTP-запроса --%>
 <jsp:setProperty name="userData" property="*" />
 <%-- Обратиться к собственному тегу для сохранения пользователя --%>

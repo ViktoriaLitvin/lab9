@@ -19,7 +19,7 @@
     <my:errorMessage />
     <%-- Отобразить форму регистрации (с подстановкой переданных
     данных) --%>
-<form action="/ad/doRegister.jsp" method="post">
+<form action="/lab8__2_0__war_exploded/doRegister.jsp" method="post">
     <table body="0" cellspacing="0" cellpadding="10">
         <tr>
             <td>Логин:</td>

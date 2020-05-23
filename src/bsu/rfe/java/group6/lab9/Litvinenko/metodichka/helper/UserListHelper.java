@@ -23,7 +23,6 @@ public abstract class UserListHelper {
             ObjectInputStream in = new ObjectInputStream(new
                     FileInputStream(USERS_PATH));
             return (UserList)in.readObject();
-//return (UserList)in.readObject();
         } catch (Exception e) {
 // Если возникли проблемы с чтением из файла, возвращаем пустой список
             return new UserList();

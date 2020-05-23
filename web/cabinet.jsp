@@ -8,15 +8,14 @@
 <%@taglib prefix="ad" uri="http://bsu.rfe.java.teacher.tag/ad" %>
 <%-- Если пользователь не аутентифицирован, то просмотр страницы невозможен --%>
 <c:if test="${sessionScope.authUser==null}">
-<c:redirect url="/index.jsp" />
+<c:redirect url="/" />
 </c:if>
 <html>
 <head>
 <title>Личный кабинет</title>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF8'/>
 <meta http-equiv="Expires" content="Mon, 11 May 1998 0:00:00 GMT">
-<meta http-equiv="Last-Modified" content="Fri, Jan 25 2099
-23:59:59 GMT">
+<meta http-equiv="Last-Modified" content="Fri, Jan 25 2099 23:59:59 GMT">
 </head>
 <body>
 <%-- Подключить заголовок страницы --%>
