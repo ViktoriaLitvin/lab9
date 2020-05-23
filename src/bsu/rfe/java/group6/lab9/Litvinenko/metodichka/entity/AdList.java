@@ -23,6 +23,10 @@ public class AdList extends ListOfIdentifiables<Ad> {
     public synchronized void deleteAd(Ad ad) {
         items.remove(ad);
     }
+
+//    public synchronized void deleteAllAd(int authorId) {
+//        items.removeIf(author -> author.getAuthorId() == authorId);
+//    }
     // Вовзращает копию содержимого списка объявлений. Метод синхронизирован.
     @SuppressWarnings("unchecked")
     public synchronized HashSet<Ad> getAds() {

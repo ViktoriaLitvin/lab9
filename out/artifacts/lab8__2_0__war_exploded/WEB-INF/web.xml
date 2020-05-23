@@ -21,16 +21,6 @@
         <servlet-name>default</servlet-name>
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
-<!--    <servlet>-->
-<!--        <description></description>-->
-<!--        <display-name>ImgServlet</display-name>-->
-<!--        <servlet-name>ImgServlet</servlet-name>-->
-<!--        <servlet-class>bsu.rfe.java.group6.lab9.Litvinenko.metodichka.servlet.ImgServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>ImgServlet</servlet-name>-->
-<!--        <url-pattern>/img</url-pattern>-->
-<!--    </servlet-mapping>-->
     <jsp-config>
         <taglib>
             <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>

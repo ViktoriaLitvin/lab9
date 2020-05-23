@@ -5,6 +5,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashSet;
+
 public class ListOfIdentifiables<T extends Identifiable & Serializable> implements Serializable {
     private static final long serialVersionUID = -4621472982618921772L;
     protected HashSet<T> items = new HashSet<T>();
@@ -14,29 +15,28 @@ public class ListOfIdentifiables<T extends Identifiable & Serializable> implemen
         nextId = 1;
     }
     // Читает из объектного потока набор элементов и помещает их в хэшмассив.
-// При этом происходит вычисление максимального идентификационного номера.
-// Данный метод автоматически вызывается в ходе процедуры десериализации.
+    // При этом происходит вычисление максимального идентификационного номера.
+    // Данный метод автоматически вызывается в ходе процедуры десериализации.
     @SuppressWarnings("unchecked")
     private void readObject(final ObjectInputStream in) throws IOException,
             ClassNotFoundException {
-// Читаем сохраненное в файле хэш-множество
+        // Читаем сохраненное в файле хэш-множество
         items = (HashSet<T>)in.readObject();
-// Ищем максимальное значение идентификатора пользователя
+        // Ищем максимальное значение идентификатора пользователя
         nextId = 0;
         for(T item : items) {
             final Integer itemId = item.getId();
             if(itemId > nextId)
                 nextId = itemId;
         }
-// Доступное значение идентификатора будет на 1 больше
-// максимального имеющегося
+    // Доступное значение идентификатора будет на 1 больше
+    // максимального имеющегося
         nextId++;
     }
     // Записывает в объектный поток содержимое хэш-массива.
-// Данный метод автоматически вызывается в ходе процедуры десериализации.
-    private void writeObject(final ObjectOutputStream out) throws
-            IOException {
-// Записываем весь хэш-массив в объектный поток
+    // Данный метод автоматически вызывается в ходе процедуры десериализации.
+    private void writeObject(final ObjectOutputStream out) throws IOException {
+    // Записываем весь хэш-массив в объектный поток
         out.writeObject(items);
     }
     // Возвращает следующее значение идентификатора.

@@ -10,7 +10,7 @@
 <c:if test="${sessionScope.authUser==null}">
 <c:redirect url="/" />
 </c:if>
-<html>
+<!DOCTYPE html>
 <head>
 <title>Личный кабинет</title>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF8'/>
@@ -21,13 +21,13 @@
 <%-- Подключить заголовок страницы --%>
 <jsp:include page="/static/header.jsp"></jsp:include>
 <%-- Вставить кнопку создания нового объявления --%>
+<my:deleteAds />
 <my:newButton />
 <h1>Личный кабинет</h1>
 <%-- Вставить разметку 1-колоночной страницы --%>
 <my:layout1Column>
     <%-- Извлечь список объявлений пользователя --%>
-    <ad:getAds range="my" var="adListing"
-               sort="${sessionScope.sort}" dir="${sessionScope.dir}" />
+    <ad:getAds range="my" var="adListing" sort="${sessionScope.sort}" dir="${sessionScope.dir}" />
     <%-- Показать объявления с возможностью редактирования --%>
     <my:adListing adListing="${adListing}" editMode="true" />
 </my:layout1Column>

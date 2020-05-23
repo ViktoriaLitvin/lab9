@@ -47,17 +47,17 @@ public class User implements Serializable, Identifiable {
         return id;
     }
     public boolean equals(Object obj) {
-// Если obj - ссылка на другой объект, равна this, то это один и тот же объект
+        // Если obj - ссылка на другой объект, равна this, то это один и тот же объект
         if (this == obj)
             return true;
-// Если ссылка на другой объект - null, то объекты не равны
+        // Если ссылка на другой объект - null, то объекты не равны
         if (obj == null)
             return false;
-// Если классы объектных ссылок не совпадают, объекты не равны
+        // Если классы объектных ссылок не совпадают, объекты не равны
         if (getClass() != obj.getClass())
             return false;
         User other = (User) obj;
-// Результат сравнения решается равенством идентификаторов
+        // Результат сравнения решается равенством идентификаторов
         if (id != other.id)
             return false;
         return true;

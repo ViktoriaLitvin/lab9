@@ -95,15 +95,23 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
         </attribute>
     </tag>
     <tag>
-        <description>Удаляет объявление из системы</description>
-        <name>deleteAd</name>
-        <tag-class>bsu.rfe.java.group6.lab9.Litvinenko.metodichka.tag.DeleteAd</tag-class>
-        <body-content>empty</body-content>
-        <attribute>
-            <description>Bean объявления</description>
-            <name>ad</name>
-            <required>true</required>
-            <rtexprvalue>true</rtexprvalue>
-        </attribute>
+    <description>Удаляет объявление из системы</description>
+    <name>deleteAd</name>
+    <tag-class>bsu.rfe.java.group6.lab9.Litvinenko.metodichka.tag.DeleteAd</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+        <description>Bean объявления</description>
+        <name>ad</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
     </tag>
+
+    <tag>
+        <description>Удаляет все объявления из системы</description>
+        <name>deleteAllAd</name>
+        <tag-class>bsu.rfe.java.group6.lab9.Litvinenko.metodichka.tag.DeleteAllAd</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
 </taglib>

@@ -24,20 +24,20 @@ public abstract class UserListHelper {
                     FileInputStream(USERS_PATH));
             return (UserList)in.readObject();
         } catch (Exception e) {
-// Если возникли проблемы с чтением из файла, возвращаем пустой список
+            // Если возникли проблемы с чтением из файла, возвращаем пустой список
             return new UserList();
         }
     }
     // Сохраняет в файле хранилища содержимое списка пользователей
     public static void saveUserList(UserList users) {
-// Путь к файлу с данными уже находится в переменной USERS_PATH
-// Она была инициализирована при загрузке данных в процессе инициализации приложения
+        // Путь к файлу с данными уже находится в переменной USERS_PATH
+        // Она была инициализирована при загрузке данных в процессе инициализации приложения
         synchronized (users) {
             try {
-// Создаем объектный поток вывода на основе файлового потока
+                // Создаем объектный поток вывода на основе файлового потока
                 ObjectOutputStream out = new ObjectOutputStream(new
                         FileOutputStream(USERS_PATH));
-// Записываем содержимое объекта в поток
+                // Записываем содержимое объекта в поток
                 out.writeObject(users);
             } catch (Exception e) {
                 e.printStackTrace();

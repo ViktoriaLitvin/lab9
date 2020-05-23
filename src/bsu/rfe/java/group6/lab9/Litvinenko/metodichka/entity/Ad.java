@@ -3,6 +3,7 @@ package bsu.rfe.java.group6.lab9.Litvinenko.metodichka.entity;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
+
 public class Ad implements Serializable, Identifiable {
     private static final long serialVersionUID = -1777984074044025486L;
     // Идентификатор сообщения
@@ -56,8 +57,8 @@ public class Ad implements Serializable, Identifiable {
         return lastModified;
     }
     public void setLastModified(Long lastModified) {
-// При установке последнего времени изменения в секундах
-// одновременно изменяется и время последнего изменения как дата
+        // При установке последнего времени изменения в секундах
+        // одновременно изменяется и время последнего изменения как дата
         this.lastModified = lastModified;
         lastModifiedDate = new Date(lastModified);
     }
@@ -68,17 +69,17 @@ public class Ad implements Serializable, Identifiable {
         return id;
     }
     public boolean equals(Object obj) {
-// Если obj - ссылка на другой объект, равна this, то это один и тот же объект
+        // Если obj - ссылка на другой объект, равна this, то это один и тот же объект
         if (this == obj)
             return true;
-// Если ссылка на другой объект - null, то объекты не равны
+        // Если ссылка на другой объект - null, то объекты не равны
         if (obj == null)
             return false;
-// Если классы объектных ссылок не совпадают, объекты не равны
+        // Если классы объектных ссылок не совпадают, объекты не равны
         if (getClass() != obj.getClass())
             return false;
         Ad other = (Ad) obj;
-// Результат сравнения решается равенством идентификаторов
+        // Результат сравнения решается равенством идентификаторов
         if (id != other.id)
             return false;
         return true;

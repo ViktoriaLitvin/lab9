@@ -23,20 +23,20 @@ public abstract class AdListHelper {
                     FileInputStream(ADS_PATH));
             return (AdList)in.readObject();
         } catch (Exception e) {
-// Если возникли проблемы с чтением из файла, возвращаем пустой список
+            // Если возникли проблемы с чтением из файла, возвращаем пустой список
             return new AdList();
         }
     }
     // Сохраняет в файле хранилища содержимое списка объявлений
     public static void saveAdList(AdList ads) {
-// Путь к файлу с данными уже находится в переменной ADS_PATH
-// Она была инициализирована при загрузке данных в процессе инициализации приложения
+        // Путь к файлу с данными уже находится в переменной ADS_PATH
+        // Она была инициализирована при загрузке данных в процессе инициализации приложения
         synchronized (ads) {
             try {
-// Создаем объектный поток вывода на основе файлового потока
+                // Создаем объектный поток вывода на основе файлового потока
                 ObjectOutputStream out = new ObjectOutputStream(new
                         FileOutputStream(ADS_PATH));
-// Записываем содержимое объекта в поток
+                // Записываем содержимое объекта в поток
                 out.writeObject(ads);
             } catch (Exception e) {
                 e.printStackTrace();

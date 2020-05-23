@@ -9,9 +9,10 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
+import java.util.Iterator;
 
-public class DeleteAd extends SimpleTagSupport {
-    // Поле данных для атрибута
+public class DeleteAllAd extends SimpleTagSupport {
+    // Поле данных для атрибута ad
     private Ad ad;
     // Метод-сеттер для установки атрибута (вызывается контейнером)
     public void setAd(Ad ad) {
@@ -25,19 +26,26 @@ public class DeleteAd extends SimpleTagSupport {
         // Извлечь из сессии описание текущего пользователя
         User currentUser = (User) getJspContext().getAttribute("authUser", PageContext.SESSION_SCOPE);
         // Проверить, что объявление изменяется его автором, а не чужаком
-        if (currentUser == null || (ad.getId() > 0 && ad.getAuthorId() != currentUser.getId())) {
-            // Произвол! Чужой, а не автор, меняет объявление!
-            errorMessage = "Вы пытаетесь изменить сообщение, к которому не обладаете правами доступа!";
-        }
+        // Проверить, что объявление изменяется его автором, а не чужаком
+
         if (errorMessage == null) {
-            // Непосредственное удаление объявления делает AdList
-            adList.deleteAd(ad);
-            //adList.deleteAllAd(ad.getAuthorId());
-            // Записать обновлѐнный список объявлений в файл
-            AdListHelper.saveAdList(adList);
+            Iterator var4 = adList.getAds().iterator();
+
+            while(true) {
+                while(var4.hasNext()) {
+                    Ad advertisement = (Ad)var4.next();
+                    if (currentUser != null && (advertisement.getId() <= 0 || advertisement.getAuthorId() == currentUser.getId())) {
+                        adList.deleteAd(advertisement);
+                    } else {
+                        //errorMessage = "Вы пытаетесь изменить сообщение, к которому не обладаете правами доступа!";
+                    }
+                }
+
+                AdListHelper.saveAdList(adList);
+                break;
+            }
         }
-        // Сохранить описание ошибки (текст или null) в сессии
-        getJspContext().setAttribute("errorMessage", errorMessage,
-                PageContext.SESSION_SCOPE);
+
+        this.getJspContext().setAttribute("errorMessage", errorMessage, PageContext.SESSION_SCOPE);
     }
 }
