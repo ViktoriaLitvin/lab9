@@ -9,7 +9,6 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
-import java.util.Iterator;
 
 public class DeleteAllAd extends SimpleTagSupport {
     // Поле данных для атрибута ad
@@ -25,24 +24,16 @@ public class DeleteAllAd extends SimpleTagSupport {
         AdList adList = (AdList) getJspContext().getAttribute("ads", PageContext.APPLICATION_SCOPE);
         // Извлечь из сессии описание текущего пользователя
         User currentUser = (User) getJspContext().getAttribute("authUser", PageContext.SESSION_SCOPE);
-        // Проверить, что объявление изменяется его автором, а не чужаком
-        // Проверить, что объявление изменяется его автором, а не чужаком
 
         if (errorMessage == null) {
-            Iterator message = adList.getAds().iterator();
-            while(true) {
-                while(message.hasNext()) {
-                    Ad advertisement = (Ad)message.next();
-                    if (currentUser != null && (advertisement.getId() <= 0 || advertisement.getAuthorId() == currentUser.getId())) {
-                        adList.deleteAd(advertisement);
-                    }
+            for(Ad advertisement : adList.getAds()){
+                if (currentUser != null && (advertisement.getId() <= 0 || advertisement.getAuthorId() == currentUser.getId())) {
+                    adList.deleteAd(advertisement);
                 }
-
-                AdListHelper.saveAdList(adList);
-                break;
             }
+            AdListHelper.saveAdList(adList);
         }
 
-        this.getJspContext().setAttribute("errorMessage", errorMessage, PageContext.SESSION_SCOPE);
+        getJspContext().setAttribute("errorMessage", errorMessage, PageContext.SESSION_SCOPE);
     }
 }

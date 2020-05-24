@@ -13,8 +13,7 @@
 <%@attribute name="editMode" required="false" rtexprvalue="false"
 	type="java.lang.Boolean"%>
 
-<%-- Таблица с заголовками показывается только если в списке есть хотя бы
-одно объявление --%>
+<%-- Таблица с заголовками показывается только если в списке есть хотя бы одно объявление --%>
 <c:if test="${adListing!=null}">
 	<table border="0" cellpadding="5" cellspacing="1">
 		<tr bgcolor="#cccccc" align="center">
@@ -72,8 +71,7 @@
 				<td><c:out value="${ad.author.name}" /></td>
 				<%-- Вывести дату последней модификации объявления --%>
 				<td>
-					<fmt:formatDate pattern="hh:mm:ss dd-MM-yyyy"
-									value="${ad.lastModifiedDate}" />
+					<fmt:formatDate pattern="hh:mm:ss dd-MM-yyyy" value="${ad.lastModifiedDate}" />
 				</td>
 			</tr>
 		</c:forEach>

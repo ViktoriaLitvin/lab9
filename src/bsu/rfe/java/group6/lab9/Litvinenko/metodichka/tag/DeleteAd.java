@@ -32,13 +32,10 @@ public class DeleteAd extends SimpleTagSupport {
         if (errorMessage == null) {
             // Непосредственное удаление объявления делает AdList
             adList.deleteAd(ad);
-            //adList.deleteAllAd(ad.getAuthorId());
-
             // Записать обновлѐнный список объявлений в файл
             AdListHelper.saveAdList(adList);
         }
         // Сохранить описание ошибки (текст или null) в сессии
-        getJspContext().setAttribute("errorMessage", errorMessage,
-                PageContext.SESSION_SCOPE);
+        getJspContext().setAttribute("errorMessage", errorMessage, PageContext.SESSION_SCOPE);
     }
 }

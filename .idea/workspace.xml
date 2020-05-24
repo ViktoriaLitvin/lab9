@@ -9,18 +9,18 @@
     <list default="true" id="a6e4db8f-dea3-4143-97a5-057da10049fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/ads.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/ads.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/classes/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/tags/adListing.tag" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/WEB-INF/tags/adListing.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/cabinet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab8__2_0__war_exploded/cabinet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab9/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/servlet/StartupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/servlet/StartupServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/entity/AdList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/entity/AdList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/AddUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/DeleteAllAd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/GetAds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/GetAds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group6/lab9/Litvinenko/metodichka/tag/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/tags/adListing.tag" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/tags/adListing.tag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/cabinet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cabinet.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -314,7 +314,9 @@
       <workItem from="1590223669175" duration="12218000" />
       <workItem from="1590242775427" duration="13203000" />
       <workItem from="1590265739452" duration="4375000" />
-      <workItem from="1590308547039" duration="1223000" />
+      <workItem from="1590308547039" duration="1664000" />
+      <workItem from="1590312743790" duration="814000" />
+      <workItem from="1590314027850" duration="1252000" />
     </task>
     <task id="LOCAL-00001" summary="metodichka1.0">
       <created>1590238684142</created>
@@ -323,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590238684142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="DeleteButton done">
+      <created>1590309830717</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590309830717</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +353,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="metodichka1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="metodichka1.0" />
+    <MESSAGE value="DeleteButton done" />
+    <option name="LAST_COMMIT_MESSAGE" value="DeleteButton done" />
   </component>
 </project>
