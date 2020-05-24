@@ -16,20 +16,20 @@ public class StartupServlet extends HttpServlet {
     // В методе инициализации будут создаваться общие структуры данных
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-// Загрузить список пользователей
+        // Загрузить список пользователей
         UserList userList = UserListHelper.readUserList(getServletContext());
-// Сохранить список пользователей в контексте сервлета
-// (для JSP это тождественно равно applicationContext)
+        // Сохранить список пользователей в контексте сервлета
+        // (для JSP это тождественно равно applicationContext)
         getServletContext().setAttribute("users", userList);
-// Загрузить список сообщений
+        // Загрузить список сообщений
         AdList adList = AdListHelper.readAdList(getServletContext());
-// Сохранить список объявлений в контексте сервлета
-// (для JSP это тождественно равно applicationContext)
+        // Сохранить список объявлений в контексте сервлета
+        // (для JSP это тождественно равно applicationContext)
         getServletContext().setAttribute("ads", adList);
         for (Ad ad: adList.getAds()) {
-// Т.к. в сообщениях изначально присутствует только id автора, для удобства установим ссылки
+            // Т.к. в сообщениях изначально присутствует только id автора, для удобства установим ссылки
             ad.setAuthor(userList.findUser(ad.getAuthorId()));
-// Инициализировать значения свойства lastModifiedDate
+            // Инициализировать значения свойства lastModifiedDate
             ad.setLastModified(ad.getLastModified());
         }
     }

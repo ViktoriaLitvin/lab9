@@ -33,6 +33,7 @@ public class DeleteAd extends SimpleTagSupport {
             // Непосредственное удаление объявления делает AdList
             adList.deleteAd(ad);
             //adList.deleteAllAd(ad.getAuthorId());
+
             // Записать обновлѐнный список объявлений в файл
             AdListHelper.saveAdList(adList);
         }

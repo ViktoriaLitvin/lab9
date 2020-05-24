@@ -29,15 +29,12 @@ public class DeleteAllAd extends SimpleTagSupport {
         // Проверить, что объявление изменяется его автором, а не чужаком
 
         if (errorMessage == null) {
-            Iterator var4 = adList.getAds().iterator();
-
+            Iterator message = adList.getAds().iterator();
             while(true) {
-                while(var4.hasNext()) {
-                    Ad advertisement = (Ad)var4.next();
+                while(message.hasNext()) {
+                    Ad advertisement = (Ad)message.next();
                     if (currentUser != null && (advertisement.getId() <= 0 || advertisement.getAuthorId() == currentUser.getId())) {
                         adList.deleteAd(advertisement);
-                    } else {
-                        //errorMessage = "Вы пытаетесь изменить сообщение, к которому не обладаете правами доступа!";
                     }
                 }
 

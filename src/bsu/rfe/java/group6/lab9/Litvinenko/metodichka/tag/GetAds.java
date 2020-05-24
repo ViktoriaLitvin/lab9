@@ -49,13 +49,13 @@ public class GetAds extends SimpleTagSupport {
     }
 
     public void doTag() throws JspException, IOException {
-// Извлечь из контекста приложения общий список объявлений
+        // Извлечь из контекста приложения общий список объявлений
         final AdList adList = (AdList) getJspContext().getAttribute("ads", PageContext.APPLICATION_SCOPE);
         if (id > 0) {
-// Если требуется извлечь данные только 1 объявления
+            // Если требуется извлечь данные только 1 объявления
             for (Ad ad : adList.getAds()) {
                 if (ad.getId() == id) {
-// Сохранить найденное объявление в переменную varName
+                    // Сохранить найденное объявление в переменную varName
                     getJspContext().setAttribute(GetAds.this.var, ad, PageContext.PAGE_SCOPE);
                 }
             }
